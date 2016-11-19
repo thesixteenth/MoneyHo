@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F693A0251DE0430E00B1A293 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F693A01B1DE0430E00B1A293 /* FMDatabase.m */; };
+		F693A0261DE0430E00B1A293 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F693A01D1DE0430E00B1A293 /* FMDatabaseAdditions.m */; };
+		F693A0271DE0430E00B1A293 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = F693A01F1DE0430E00B1A293 /* FMDatabasePool.m */; };
+		F693A0281DE0430E00B1A293 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F693A0211DE0430E00B1A293 /* FMDatabaseQueue.m */; };
+		F693A0291DE0430E00B1A293 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F693A0241DE0430E00B1A293 /* FMResultSet.m */; };
+		F693A02C1DE0436100B1A293 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F693A02B1DE0436100B1A293 /* libsqlite3.tbd */; };
+		F693A02E1DE0442200B1A293 /* MoneyIOViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */; };
 		FF0A228E1DDB4A90009E4DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A228D1DDB4A90009E4DA2 /* AppDelegate.swift */; };
 		FF0A22901DDB4A90009E4DA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A228F1DDB4A90009E4DA2 /* ViewController.swift */; };
 		FF0A22931DDB4A90009E4DA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0A22911DDB4A90009E4DA2 /* Main.storyboard */; };
@@ -15,6 +22,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F693A0191DE0430D00B1A293 /* MoneyHo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoneyHo-Bridging-Header.h"; sourceTree = "<group>"; };
+		F693A01A1DE0430E00B1A293 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		F693A01B1DE0430E00B1A293 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		F693A01C1DE0430E00B1A293 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		F693A01D1DE0430E00B1A293 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		F693A01E1DE0430E00B1A293 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		F693A01F1DE0430E00B1A293 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		F693A0201DE0430E00B1A293 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		F693A0211DE0430E00B1A293 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		F693A0221DE0430E00B1A293 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		F693A0231DE0430E00B1A293 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		F693A0241DE0430E00B1A293 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		F693A02B1DE0436100B1A293 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyIOViewControl.swift; sourceTree = "<group>"; };
 		FF0A228A1DDB4A90009E4DA2 /* MoneyHo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyHo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0A228D1DDB4A90009E4DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF0A228F1DDB4A90009E4DA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +50,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F693A02C1DE0436100B1A293 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F693A02A1DE0436100B1A293 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F693A02B1DE0436100B1A293 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FF0A22811DDB4A90009E4DA2 = {
 			isa = PBXGroup;
 			children = (
+				F693A01A1DE0430E00B1A293 /* FMDatabase.h */,
+				F693A01B1DE0430E00B1A293 /* FMDatabase.m */,
+				F693A01C1DE0430E00B1A293 /* FMDatabaseAdditions.h */,
+				F693A01D1DE0430E00B1A293 /* FMDatabaseAdditions.m */,
+				F693A01E1DE0430E00B1A293 /* FMDatabasePool.h */,
+				F693A01F1DE0430E00B1A293 /* FMDatabasePool.m */,
+				F693A0201DE0430E00B1A293 /* FMDatabaseQueue.h */,
+				F693A0211DE0430E00B1A293 /* FMDatabaseQueue.m */,
+				F693A0221DE0430E00B1A293 /* FMDB.h */,
+				F693A0231DE0430E00B1A293 /* FMResultSet.h */,
+				F693A0241DE0430E00B1A293 /* FMResultSet.m */,
+				F693A0191DE0430D00B1A293 /* MoneyHo-Bridging-Header.h */,
 				FF0A228C1DDB4A90009E4DA2 /* MoneyHo */,
 				FF0A228B1DDB4A90009E4DA2 /* Products */,
+				F693A02A1DE0436100B1A293 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +99,7 @@
 			children = (
 				FF0A228D1DDB4A90009E4DA2 /* AppDelegate.swift */,
 				FF0A228F1DDB4A90009E4DA2 /* ViewController.swift */,
+				F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */,
 				FF0A22911DDB4A90009E4DA2 /* Main.storyboard */,
 				FF0A22941DDB4A90009E4DA2 /* Assets.xcassets */,
 				FF0A22961DDB4A90009E4DA2 /* LaunchScreen.storyboard */,
@@ -136,8 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F693A0251DE0430E00B1A293 /* FMDatabase.m in Sources */,
 				FF0A22901DDB4A90009E4DA2 /* ViewController.swift in Sources */,
+				F693A0291DE0430E00B1A293 /* FMResultSet.m in Sources */,
+				F693A0271DE0430E00B1A293 /* FMDatabasePool.m in Sources */,
 				FF0A228E1DDB4A90009E4DA2 /* AppDelegate.swift in Sources */,
+				F693A0261DE0430E00B1A293 /* FMDatabaseAdditions.m in Sources */,
+				F693A0281DE0430E00B1A293 /* FMDatabaseQueue.m in Sources */,
+				F693A02E1DE0442200B1A293 /* MoneyIOViewControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,10 +300,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MoneyHo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thesixteenth.MoneyHo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MoneyHo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -262,10 +315,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MoneyHo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thesixteenth.MoneyHo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MoneyHo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
