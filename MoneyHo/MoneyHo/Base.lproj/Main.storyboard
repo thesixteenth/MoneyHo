@@ -29,6 +29,20 @@
                                     <segue destination="zR8-Us-MfR" kind="push" id="Q1E-C6-v5b"/>
                                 </connections>
                             </button>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TzZ-px-TEZ">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem id="5WG-eR-vaF">
+                                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="월" id="bdt-nq-QnL"/>
+                                    <tabBarItem title="주" id="rtD-Hd-Zqy"/>
+                                    <tabBarItem title="일" id="DsZ-Ec-B8p"/>
+                                    <tabBarItem id="eC1-H3-u7z"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
