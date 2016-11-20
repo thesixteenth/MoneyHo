@@ -15,7 +15,7 @@
 		F693A02C1DE0436100B1A293 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F693A02B1DE0436100B1A293 /* libsqlite3.tbd */; };
 		F693A02E1DE0442200B1A293 /* MoneyIOViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */; };
 		FF0A228E1DDB4A90009E4DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A228D1DDB4A90009E4DA2 /* AppDelegate.swift */; };
-		FF0A22901DDB4A90009E4DA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A228F1DDB4A90009E4DA2 /* ViewController.swift */; };
+		FF0A22901DDB4A90009E4DA2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A228F1DDB4A90009E4DA2 /* MainViewController.swift */; };
 		FF0A22931DDB4A90009E4DA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0A22911DDB4A90009E4DA2 /* Main.storyboard */; };
 		FF0A22951DDB4A90009E4DA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0A22941DDB4A90009E4DA2 /* Assets.xcassets */; };
 		FF0A22981DDB4A90009E4DA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0A22961DDB4A90009E4DA2 /* LaunchScreen.storyboard */; };
@@ -38,7 +38,7 @@
 		F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyIOViewControl.swift; sourceTree = "<group>"; };
 		FF0A228A1DDB4A90009E4DA2 /* MoneyHo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyHo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0A228D1DDB4A90009E4DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF0A228F1DDB4A90009E4DA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF0A228F1DDB4A90009E4DA2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FF0A22921DDB4A90009E4DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF0A22941DDB4A90009E4DA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF0A22971DDB4A90009E4DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 		FF0A228C1DDB4A90009E4DA2 /* MoneyHo */ = {
 			isa = PBXGroup;
 			children = (
+				FF429FC41DE1CB73003EB909 /* Main */,
 				FF0A228D1DDB4A90009E4DA2 /* AppDelegate.swift */,
-				FF0A228F1DDB4A90009E4DA2 /* ViewController.swift */,
 				F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */,
 				FF0A22911DDB4A90009E4DA2 /* Main.storyboard */,
 				FF0A22941DDB4A90009E4DA2 /* Assets.xcassets */,
@@ -106,6 +106,14 @@
 				FF0A22991DDB4A90009E4DA2 /* Info.plist */,
 			);
 			path = MoneyHo;
+			sourceTree = "<group>";
+		};
+		FF429FC41DE1CB73003EB909 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FF0A228F1DDB4A90009E4DA2 /* MainViewController.swift */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F693A0251DE0430E00B1A293 /* FMDatabase.m in Sources */,
-				FF0A22901DDB4A90009E4DA2 /* ViewController.swift in Sources */,
+				FF0A22901DDB4A90009E4DA2 /* MainViewController.swift in Sources */,
 				F693A0291DE0430E00B1A293 /* FMResultSet.m in Sources */,
 				F693A0271DE0430E00B1A293 /* FMDatabasePool.m in Sources */,
 				FF0A228E1DDB4A90009E4DA2 /* AppDelegate.swift in Sources */,
