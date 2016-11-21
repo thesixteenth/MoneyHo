@@ -38,7 +38,9 @@ class MoneyViewController : UIViewController
                 }
                 
                 //Table 생성 이후에 초기값으로 0 을 세팅 한다.
+                let insertSQL = "INSERT INTO CONTACTS (BALANCE, DEPOSIT, WITHDRAW,TOTALDEPOSIT,TOTALWITHDRAW) VALUES ('0', '0', '0', '0', '0')"
                 
+                contactDB?.executeUpdate(insertSQL,withArgumentsIn: nil)
                 contactDB?.close()
             } else {
                 print("Error: \(contactDB?.lastErrorMessage())")
@@ -55,6 +57,7 @@ class MoneyViewController : UIViewController
     {
         // 기존에 입금된 금액이랑 지금 입금된 금액을 더해서 DB에 넣어야 된다. (balance 값도 변경)
         print("입금")
+        
         let contactDB = FMDatabase(path: databasePath as String)
         
         if (contactDB?.open())! {
@@ -107,8 +110,7 @@ class MoneyViewController : UIViewController
             print("Error @@@: \(contactDB?.lastErrorMessage())")
             
         }
-
-        
+ 
     }
     @IBAction func withdraw(_ sender: UIButton)
     {
