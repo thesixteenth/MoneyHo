@@ -169,7 +169,7 @@ class MoneyViewController : UIViewController
             
             // 잔액 및 전체 출금 금액 찾아오기  ID는 1 번 값만 사용한다.
             
-            let querySQL = "SELECT BALANCE, TOTALWITHDRAW FROM MONEYHO WHERE ID = 1"
+            let querySQL = "SELECT BALANCE, TOTALWITHDRAW FROM MONEYHOS WHERE ID = 1"
             
             let results:FMResultSet? = contactDB?.executeQuery(querySQL,
                                                                withArgumentsIn: nil)
@@ -198,7 +198,7 @@ class MoneyViewController : UIViewController
                 
                 print(insertTotalWithdraw)
                 
-                let insertSQL = "UPDATE MONEYHO SET BALANCE = '\(String(insertBalance))',TOTALWITHDRAW = '\(String(insertTotalWithdraw))' WHERE ID = 1"
+                let insertSQL = "UPDATE MONEYHOS SET BALANCE = '\(String(insertBalance))',TOTALWITHDRAW = '\(String(insertTotalWithdraw))' WHERE ID = 1"
                 
                 
                 // 현재 출금 금액을 전체 출금 금액이랑 잔액에 뺀 값을 넣는다.
@@ -217,6 +217,44 @@ class MoneyViewController : UIViewController
             print("Error @@@: \(contactDB?.lastErrorMessage())")
             
         }
+        let todaysDate = NSDate()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        let DateInFormat = dateFormatter.string(from: todaysDate as Date)
+        
+        var withDrawMoney = String()
+        print(DateInFormat)
+        
+        if (contactDB?.open())! {
+            
+            // 현재 날자에 입금된 모든 금액을 가져 온다
+            let querySQL = "SELECT WITHDRAW FROM MONEYHOS WHERE DATA = '\(DateInFormat)'"
+            
+            let results:FMResultSet? = contactDB?.executeQuery(querySQL,
+                                                               withArgumentsIn: nil)
+            
+            if results?.next() == true {
+                //입금된 금액에 현재 금액을 더한 값을 Insert한다
+                withDrawMoney = (results?.string(forColumn: "WITHDRAW"))!
+                withDrawMoney += "," + "\(currentMoney.text!)"
+            }
+            else {
+                print("Fail")
+            }
+            
+            print(withDrawMoney)
+            let insertSQL = "UPDATE MONEYHOS SET WITHDRAW = '\(withDrawMoney)' WHERE DATA= '\(DateInFormat)'"
+            
+            let result = contactDB?.executeUpdate(insertSQL,
+                                                  withArgumentsIn: nil)
+            
+            if !result! {
+                print("Error: \(contactDB?.lastErrorMessage())")
+            }
+            else {
+            }
+        }
+
         
         
     }
