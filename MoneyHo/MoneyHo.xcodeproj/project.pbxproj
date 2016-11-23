@@ -20,6 +20,8 @@
 		FF0A22931DDB4A90009E4DA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0A22911DDB4A90009E4DA2 /* Main.storyboard */; };
 		FF0A22951DDB4A90009E4DA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0A22941DDB4A90009E4DA2 /* Assets.xcassets */; };
 		FF0A22981DDB4A90009E4DA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0A22961DDB4A90009E4DA2 /* LaunchScreen.storyboard */; };
+		FFACA4F31DE5D47F00470209 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACA4F21DE5D47F00470209 /* MonthView.swift */; };
+		FFACA4F51DE5D49200470209 /* MonthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFACA4F41DE5D49200470209 /* MonthView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		FF0A22941DDB4A90009E4DA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF0A22971DDB4A90009E4DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF0A22991DDB4A90009E4DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFACA4F21DE5D47F00470209 /* MonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonthView.swift; path = Main/MonthView.swift; sourceTree = "<group>"; };
+		FFACA4F41DE5D49200470209 /* MonthView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MonthView.xib; path = Main/MonthView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				FF0A228F1DDB4A90009E4DA2 /* MainViewController.swift */,
+				FFACA4F21DE5D47F00470209 /* MonthView.swift */,
+				FFACA4F41DE5D49200470209 /* MonthView.xib */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 				FF0A22981DDB4A90009E4DA2 /* LaunchScreen.storyboard in Resources */,
 				FF0A22951DDB4A90009E4DA2 /* Assets.xcassets in Resources */,
 				FF0A22931DDB4A90009E4DA2 /* Main.storyboard in Resources */,
+				FFACA4F51DE5D49200470209 /* MonthView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F693A0251DE0430E00B1A293 /* FMDatabase.m in Sources */,
+				FFACA4F31DE5D47F00470209 /* MonthView.swift in Sources */,
 				FF0A22901DDB4A90009E4DA2 /* MainViewController.swift in Sources */,
 				F693A0291DE0430E00B1A293 /* FMResultSet.m in Sources */,
 				F693A0271DE0430E00B1A293 /* FMDatabasePool.m in Sources */,
