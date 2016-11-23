@@ -42,11 +42,17 @@
                                     <tabBarItem title="일" id="DsZ-Ec-B8p"/>
                                     <tabBarItem id="eC1-H3-u7z"/>
                                 </items>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xeX-F4-voq"/>
+                                </connections>
                             </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="LdI-xy-2kZ"/>
+                    <connections>
+                        <outlet property="tabBar" destination="TzZ-px-TEZ" id="wDS-Bp-rbb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
