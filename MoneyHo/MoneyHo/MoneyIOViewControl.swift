@@ -61,7 +61,7 @@ class MoneyViewController : UIViewController
         let contactDB = FMDatabase(path: databasePath as String)
         
         if (contactDB?.open())! {
-
+            
             var currentBalance = String()
             var totalDeposit = String()
             
@@ -69,8 +69,8 @@ class MoneyViewController : UIViewController
             let querySQL = "SELECT BALANCE, TOTALDEPOSIT FROM MONEYHO WHERE ID = 1"
             
             let results:FMResultSet? = contactDB?.executeQuery(querySQL,
-            withArgumentsIn: nil)
-             
+                                                               withArgumentsIn: nil)
+            
             if results?.next() == true {
                 currentBalance = (results?.string(forColumn: "BALANCE"))!
                 print(currentBalance)
@@ -110,7 +110,7 @@ class MoneyViewController : UIViewController
             print("Error @@@: \(contactDB?.lastErrorMessage())")
             
         }
- 
+         
     }
     @IBAction func withdraw(_ sender: UIButton)
     {

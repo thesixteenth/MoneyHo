@@ -64,14 +64,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wu-fS-wXT">
-                                <rect key="frame" x="33" y="182" width="150" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="입금"/>
-                                <connections>
-                                    <action selector="deposit:" destination="zR8-Us-MfR" eventType="touchUpInside" id="yjr-fo-NAa"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uee-y9-VNA">
                                 <rect key="frame" x="191" y="182" width="150" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -95,6 +87,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wu-fS-wXT">
+                                <rect key="frame" x="33" y="182" width="150" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="입금"/>
+                                <connections>
+                                    <action selector="deposit:" destination="zR8-Us-MfR" eventType="touchUpInside" id="yjr-fo-NAa"/>
+                                    <segue destination="gQx-kQ-WZJ" kind="push" id="Pu0-uT-DxY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -106,6 +107,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVR-LE-ES5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1908" y="37.331334332833585"/>
+        </scene>
+        <!--Deposit View-->
+        <scene sceneID="cWO-E5-dsn">
+            <objects>
+                <viewController id="gQx-kQ-WZJ" customClass="DepositView" customModule="MoneyHo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BJJ-fJ-fsY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Az2-4y-fUF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OGu-br-zh2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJO-TY-76y">
+                                <rect key="frame" x="16" y="185" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="확인"/>
+                                <connections>
+                                    <action selector="DepositOk:" destination="gQx-kQ-WZJ" eventType="touchUpInside" id="9pi-FL-OSN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ncZ-hF-xIh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRr-mF-xeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2620" y="58.920539730134934"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wmT-no-BKE">
