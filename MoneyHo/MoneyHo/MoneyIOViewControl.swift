@@ -160,6 +160,16 @@ class MoneyViewController : UIViewController
             }
             
             print(depositMoney)
+            let insertSQL2 = "UPDATE MONEYHOS SET DEPOSIT = '\(depositMoney)' WHERE DATA= '\(DateInFormat)'"
+            
+            let result = contactDB?.executeUpdate(insertSQL2,
+                                                  withArgumentsIn: nil)
+            
+            if !result! {
+                print("Error: \(contactDB?.lastErrorMessage())")
+            }
+            else {
+            }
         }
         
     }
@@ -247,6 +257,17 @@ class MoneyViewController : UIViewController
             }
             else {
                 print("Fail")
+                let insertSQL2 = "UPDATE MONEYHOS SET WITHDRAW = '\(withDrawMoney)' WHERE DATA= '\(DateInFormat)'"
+                
+                let result = contactDB?.executeUpdate(insertSQL2,
+                                                      withArgumentsIn: nil)
+                
+                if !result! {
+                    print("Error: \(contactDB?.lastErrorMessage())")
+                }
+                else {
+                }
+
             }
             
             print(withDrawMoney)
