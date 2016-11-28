@@ -71,6 +71,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F6F6C0B41DEC5C440001C605 /* db */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = db;
+			sourceTree = "<group>";
+		};
 		FF0A22811DDB4A90009E4DA2 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +110,7 @@
 		FF0A228C1DDB4A90009E4DA2 /* MoneyHo */ = {
 			isa = PBXGroup;
 			children = (
+				F6F6C0B41DEC5C440001C605 /* db */,
 				FF429FC41DE1CB73003EB909 /* Main */,
 				FF0A228D1DDB4A90009E4DA2 /* AppDelegate.swift */,
 				F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */,

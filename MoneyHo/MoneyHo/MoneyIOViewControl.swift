@@ -10,49 +10,51 @@ import Foundation
 import UIKit
 var databasePath = NSString()
 
-class MoneyViewController : UIViewController
-{
+class MoneyViewController : UIViewController {
+    
     @IBOutlet weak var currentMoney: UITextField!
     
-    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         let filemgr = FileManager.default
         let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)
         
         databasePath = dirPaths[0].appendingPathComponent("MoneyHOS.db").path as NSString
         
-        
-        if !filemgr.fileExists(atPath: databasePath as String) {
-            
-            let contactDB = FMDatabase(path: databasePath as String)
-            
-            if contactDB == nil {
-                print("Error: \(contactDB?.lastErrorMessage())")
-            }
-            
-            if (contactDB?.open())! {
-                let sql_stmt = "CREATE TABLE IF NOT EXISTS MONEYHOS (ID INTEGER PRIMARY KEY AUTOINCREMENT, BALANCE TEXT, DEPOSIT TEXT, WITHDRAW TEXT, TOTALDEPOSIT TEXT, TOTALWITHDRAW TEXT, DATA TEXT)"
-                if !(contactDB?.executeStatements(sql_stmt))! {
-                    print("Error ####: \(contactDB?.lastErrorMessage())")
-                }
-                
-                //Table 생성 이후에 초기값으로 0 을 세팅 한다.
-                /*
-                let todaysDate = NSDate()
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyyMMdd"
-                let DateInFormat = dateFormatter.string(from: todaysDate as Date)
-                
-                let insertSQL = "INSERT INTO MONEYHOS (BALANCE, DEPOSIT, WITHDRAW,TOTALDEPOSIT,TOTALWITHDRAW,DATA) VALUES ('0', '0', '0', '0', '0', '\(DateInFormat)')"
-                
-                contactDB?.executeUpdate(insertSQL,withArgumentsIn: nil)
-                */
-                contactDB?.close()
-            } else {
-                print("Error: \(contactDB?.lastErrorMessage())")
-            }
+        if filemgr.fileExists(atPath: databasePath as String) {
+            return;
         }
+        
+        
+        let contactDB = FMDatabase(path: databasePath as String)
+        
+        if contactDB == nil {
+            print("Error: \(contactDB?.lastErrorMessage())")
+        }
+        
+        if (contactDB?.open())! {
+            let sql_stmt = "CREATE TABLE IF NOT EXISTS MONEYHOS (ID INTEGER PRIMARY KEY AUTOINCREMENT, BALANCE TEXT, DEPOSIT TEXT, WITHDRAW TEXT, TOTALDEPOSIT TEXT, TOTALWITHDRAW TEXT, DATA TEXT)"
+            if !(contactDB?.executeStatements(sql_stmt))! {
+                print("Error ####: \(contactDB?.lastErrorMessage())")
+            }
+            
+            //Table 생성 이후에 초기값으로 0 을 세팅 한다.
+            /*
+             let todaysDate = NSDate()
+             let dateFormatter = DateFormatter()
+             dateFormatter.dateFormat = "yyyyMMdd"
+             let DateInFormat = dateFormatter.string(from: todaysDate as Date)
+             
+             let insertSQL = "INSERT INTO MONEYHOS (BALANCE, DEPOSIT, WITHDRAW,TOTALDEPOSIT,TOTALWITHDRAW,DATA) VALUES ('0', '0', '0', '0', '0', '\(DateInFormat)')"
+             
+             contactDB?.executeUpdate(insertSQL,withArgumentsIn: nil)
+             */
+            contactDB?.close()
+        } else {
+            print("Error: \(contactDB?.lastErrorMessage())")
+        }
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,62 +62,57 @@ class MoneyViewController : UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func deposit(_ sender: Any)
-    {
+    @IBAction func deposit(_ sender: Any) {
+        
         // 기존에 입금된 금액이랑 지금 입금된 금액을 더해서 DB에 넣어야 된다. (balance 값도 변경)
         print("입금")
         
+        if currentMoney.text == "" {
+            return;
+        }
+        
         let contactDB = FMDatabase(path: databasePath as String)
         
-        if (contactDB?.open())! {
-            
-            var currentBalance = String()
-            var totalDeposit = String()
-            
-            // 잔액 및 전체 입금 금액 찾아오기  ID는 1 번 값만 사용한다.
-            let querySQL = "SELECT BALANCE, TOTALDEPOSIT FROM MONEYHOS WHERE ID = 1"
-            
-            let results:FMResultSet? = contactDB?.executeQuery(querySQL,
-                                                               withArgumentsIn: nil)
-            
-            if results?.next() == true {
-                currentBalance = (results?.string(forColumn: "BALANCE"))!
-                print(currentBalance)
-                totalDeposit = (results?.string(forColumn: "TOTALDEPOSIT"))!
-                print(totalDeposit)
-            }
-            else {
-                print("Fail")
-            }
-            
-            if currentMoney.text! != ""
-            {
-                let convertBalance : Int = Int(currentBalance)!
-                let convertCurrentMoney : Int = Int(currentMoney.text!)!
-                
-                let insertBalance : Int = convertBalance + convertCurrentMoney
-                
-                let convertTotalDeposit : Int = Int(totalDeposit)!
-                let insertTotalDeposit : Int = convertTotalDeposit + convertCurrentMoney
-                
-                let insertSQL = "UPDATE MONEYHOS SET BALANCE = '\(String(insertBalance))',TOTALDEPOSIT = '\(String(insertTotalDeposit))' WHERE ID = 1"
-                
-                
-                // 현재 입금 금액을 전체 입금 금액이랑 잔액에 더한 값을 넣는다.
-                let result = contactDB?.executeUpdate(insertSQL,withArgumentsIn: nil)
-                
-                if !result! {
-                    print("Error !!!: \(contactDB?.lastErrorMessage())")
-                }
-                else {
-                    print("Success!!!")
-                }
-            }
-            
+        if !(contactDB?.open())! {
+            print("Error @@@: \(contactDB?.lastErrorMessage())")
+        }
+        
+        var currentBalance = String()
+        var totalDeposit = String()
+        
+        // 잔액 및 전체 입금 금액 찾아오기  ID는 1 번 값만 사용한다.
+        let querySQL = "SELECT BALANCE, TOTALDEPOSIT FROM MONEYHOS WHERE ID = 1"
+        
+        let results:FMResultSet? = contactDB?.executeQuery(querySQL,
+                                                           withArgumentsIn: nil)
+        
+        if results?.next() == true {
+            currentBalance = (results?.string(forColumn: "BALANCE"))!
+            print(currentBalance)
+            totalDeposit = (results?.string(forColumn: "TOTALDEPOSIT"))!
+            print(totalDeposit)
         }
         else {
-            print("Error @@@: \(contactDB?.lastErrorMessage())")
-            
+            print("Fail")
+        }
+        
+        let convertBalance : Int = Int(currentBalance)!
+        let convertCurrentMoney : Int = Int(currentMoney.text!)!
+        
+        let insertBalance : Int = convertBalance + convertCurrentMoney
+        
+        let convertTotalDeposit : Int = Int(totalDeposit)!
+        let insertTotalDeposit : Int = convertTotalDeposit + convertCurrentMoney
+        
+        let insertSQL = "UPDATE MONEYHOS SET BALANCE = '\(String(insertBalance))',TOTALDEPOSIT = '\(String(insertTotalDeposit))' WHERE ID = 1"
+        
+        // 현재 입금 금액을 전체 입금 금액이랑 잔액에 더한 값을 넣는다.
+        let result = contactDB?.executeUpdate(insertSQL,withArgumentsIn: nil)
+        if !result! {
+            print("Error !!!: \(contactDB?.lastErrorMessage())")
+        }
+        else {
+            print("Success!!!")
         }
         
         //날자 별로 입금 금액을 전부 기억 하고 있어야 한다
