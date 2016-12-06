@@ -25,18 +25,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F693A0191DE0430D00B1A293 /* MoneyHo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoneyHo-Bridging-Header.h"; sourceTree = "<group>"; };
-		F693A01A1DE0430E00B1A293 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		F693A01B1DE0430E00B1A293 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		F693A01C1DE0430E00B1A293 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		F693A01D1DE0430E00B1A293 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		F693A01E1DE0430E00B1A293 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		F693A01F1DE0430E00B1A293 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		F693A0201DE0430E00B1A293 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		F693A0211DE0430E00B1A293 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		F693A0221DE0430E00B1A293 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		F693A0231DE0430E00B1A293 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		F693A0241DE0430E00B1A293 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		F693A0191DE0430D00B1A293 /* MoneyHo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoneyHo-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		F693A01A1DE0430E00B1A293 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = ../FMDatabase.h; sourceTree = "<group>"; };
+		F693A01B1DE0430E00B1A293 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = ../FMDatabase.m; sourceTree = "<group>"; };
+		F693A01C1DE0430E00B1A293 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = ../FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		F693A01D1DE0430E00B1A293 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = ../FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		F693A01E1DE0430E00B1A293 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = ../FMDatabasePool.h; sourceTree = "<group>"; };
+		F693A01F1DE0430E00B1A293 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = ../FMDatabasePool.m; sourceTree = "<group>"; };
+		F693A0201DE0430E00B1A293 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = ../FMDatabaseQueue.h; sourceTree = "<group>"; };
+		F693A0211DE0430E00B1A293 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = ../FMDatabaseQueue.m; sourceTree = "<group>"; };
+		F693A0221DE0430E00B1A293 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = ../FMDB.h; sourceTree = "<group>"; };
+		F693A0231DE0430E00B1A293 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = ../FMResultSet.h; sourceTree = "<group>"; };
+		F693A0241DE0430E00B1A293 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = ../FMResultSet.m; sourceTree = "<group>"; };
 		F693A02B1DE0436100B1A293 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyIOViewControl.swift; sourceTree = "<group>"; };
 		F6F95FD01DE557CA001E91EC /* DepositViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositViewControl.swift; sourceTree = "<group>"; };
@@ -71,14 +71,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F6F6C0B41DEC5C440001C605 /* db */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = db;
-			sourceTree = "<group>";
-		};
-		FF0A22811DDB4A90009E4DA2 = {
+		F6ACFE651DF2894B0062E6EA /* Database */ = {
 			isa = PBXGroup;
 			children = (
 				F693A01A1DE0430E00B1A293 /* FMDatabase.h */,
@@ -93,6 +86,15 @@
 				F693A0231DE0430E00B1A293 /* FMResultSet.h */,
 				F693A0241DE0430E00B1A293 /* FMResultSet.m */,
 				F693A0191DE0430D00B1A293 /* MoneyHo-Bridging-Header.h */,
+				F6F95FD01DE557CA001E91EC /* DepositViewControl.swift */,
+				F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		FF0A22811DDB4A90009E4DA2 = {
+			isa = PBXGroup;
+			children = (
 				FF0A228C1DDB4A90009E4DA2 /* MoneyHo */,
 				FF0A228B1DDB4A90009E4DA2 /* Products */,
 				F693A02A1DE0436100B1A293 /* Frameworks */,
@@ -110,11 +112,9 @@
 		FF0A228C1DDB4A90009E4DA2 /* MoneyHo */ = {
 			isa = PBXGroup;
 			children = (
-				F6F6C0B41DEC5C440001C605 /* db */,
+				F6ACFE651DF2894B0062E6EA /* Database */,
 				FF429FC41DE1CB73003EB909 /* Main */,
 				FF0A228D1DDB4A90009E4DA2 /* AppDelegate.swift */,
-				F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */,
-				F6F95FD01DE557CA001E91EC /* DepositViewControl.swift */,
 				FF0A22911DDB4A90009E4DA2 /* Main.storyboard */,
 				FF0A22941DDB4A90009E4DA2 /* Assets.xcassets */,
 				FF0A22961DDB4A90009E4DA2 /* LaunchScreen.storyboard */,

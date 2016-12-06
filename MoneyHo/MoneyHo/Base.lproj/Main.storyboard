@@ -76,6 +76,7 @@
                                 <state key="normal" title="출금"/>
                                 <connections>
                                     <action selector="withdraw:" destination="zR8-Us-MfR" eventType="touchUpInside" id="K14-A8-PUR"/>
+                                    <segue destination="gQx-kQ-WZJ" kind="push" id="UOR-QO-FMr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jp-gd-4e3">
@@ -99,7 +100,7 @@
                                 <state key="normal" title="입금"/>
                                 <connections>
                                     <action selector="deposit:" destination="zR8-Us-MfR" eventType="touchUpInside" id="yjr-fo-NAa"/>
-                                    <segue destination="gQx-kQ-WZJ" kind="push" id="Pu0-uT-DxY"/>
+                                    <segue destination="gQx-kQ-WZJ" kind="push" identifier="SendMoney" id="Pu0-uT-DxY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -148,7 +149,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eea-Kf-th5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="Sbu-aY-6UK">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="Sbu-aY-6UK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -162,4 +163,7 @@
             <point key="canvasLocation" x="49" y="38"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Pu0-uT-DxY"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -40,16 +40,7 @@ class MoneyViewController : UIViewController {
             }
             
             //Table 생성 이후에 초기값으로 0 을 세팅 한다.
-            /*
-             let todaysDate = NSDate()
-             let dateFormatter = DateFormatter()
-             dateFormatter.dateFormat = "yyyyMMdd"
-             let DateInFormat = dateFormatter.string(from: todaysDate as Date)
-             
-             let insertSQL = "INSERT INTO MONEYHOS (BALANCE, DEPOSIT, WITHDRAW,TOTALDEPOSIT,TOTALWITHDRAW,DATA) VALUES ('0', '0', '0', '0', '0', '\(DateInFormat)')"
-             
-             contactDB?.executeUpdate(insertSQL,withArgumentsIn: nil)
-             */
+
             contactDB?.close()
         } else {
             print("Error: \(contactDB?.lastErrorMessage())")
@@ -170,6 +161,8 @@ class MoneyViewController : UIViewController {
         }
         
     }
+    
+    
     @IBAction func withdraw(_ sender: UIButton)
     {
         print("출금")
@@ -279,12 +272,17 @@ class MoneyViewController : UIViewController {
             else {
             }
         }
-
-        
-        
     }
-    @IBAction func closeView(_ sender: UIButton)
-    {
+    
+    @IBAction func closeView(_ sender: UIButton){
         print("닫기")
     }
+    
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        NSLog("aaa")
+        let destView = segue.destination as! DepositView
+        let indexpath = self.currentMoney.text
+        destView.temp = indexpath!
+    
+   }
 }

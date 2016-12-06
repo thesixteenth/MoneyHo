@@ -9,8 +9,20 @@
 import Foundation
 import UIKit
 
-class DepositView : UIViewController
-{
+class DepositView : UIViewController{
+    
+    var temp : String = ""
+    
+    override func viewDidLoad() {
+        NSLog("temp = %@", temp)
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    
     @IBAction func DepositOk(_ sender: UIButton) {
         //입금 확인
         print("입금")
