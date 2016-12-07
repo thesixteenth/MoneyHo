@@ -14,6 +14,7 @@
 		F693A0291DE0430E00B1A293 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F693A0241DE0430E00B1A293 /* FMResultSet.m */; };
 		F693A02C1DE0436100B1A293 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F693A02B1DE0436100B1A293 /* libsqlite3.tbd */; };
 		F693A02E1DE0442200B1A293 /* MoneyIOViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */; };
+		F6F58E871DF656A800945BC6 /* DBMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F58E861DF656A800945BC6 /* DBMethod.swift */; };
 		F6F95FD11DE557CA001E91EC /* DepositViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F95FD01DE557CA001E91EC /* DepositViewControl.swift */; };
 		FF0A228E1DDB4A90009E4DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A228D1DDB4A90009E4DA2 /* AppDelegate.swift */; };
 		FF0A22901DDB4A90009E4DA2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A228F1DDB4A90009E4DA2 /* MainViewController.swift */; };
@@ -39,6 +40,7 @@
 		F693A0241DE0430E00B1A293 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = ../FMResultSet.m; sourceTree = "<group>"; };
 		F693A02B1DE0436100B1A293 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyIOViewControl.swift; sourceTree = "<group>"; };
+		F6F58E861DF656A800945BC6 /* DBMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBMethod.swift; sourceTree = "<group>"; };
 		F6F95FD01DE557CA001E91EC /* DepositViewControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositViewControl.swift; sourceTree = "<group>"; };
 		FF0A228A1DDB4A90009E4DA2 /* MoneyHo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyHo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0A228D1DDB4A90009E4DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				F693A0191DE0430D00B1A293 /* MoneyHo-Bridging-Header.h */,
 				F6F95FD01DE557CA001E91EC /* DepositViewControl.swift */,
 				F693A02D1DE0442200B1A293 /* MoneyIOViewControl.swift */,
+				F6F58E861DF656A800945BC6 /* DBMethod.swift */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				FF0A228E1DDB4A90009E4DA2 /* AppDelegate.swift in Sources */,
 				F6F95FD11DE557CA001E91EC /* DepositViewControl.swift in Sources */,
 				F693A0261DE0430E00B1A293 /* FMDatabaseAdditions.m in Sources */,
+				F6F58E871DF656A800945BC6 /* DBMethod.swift in Sources */,
 				F693A0281DE0430E00B1A293 /* FMDatabaseQueue.m in Sources */,
 				F693A02E1DE0442200B1A293 /* MoneyIOViewControl.swift in Sources */,
 			);

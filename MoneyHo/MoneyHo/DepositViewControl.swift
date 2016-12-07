@@ -14,8 +14,14 @@ class DepositView : UIViewController{
     var temp : String = ""
     
     override func viewDidLoad() {
-        NSLog("temp = %@", temp)
+        
+        let db  =  DBMethod()
+        db.openDb()
+        
+        db.insertDeposit(money: 10000)
+        
         super.viewDidLoad()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,7 +31,7 @@ class DepositView : UIViewController{
     
     @IBAction func DepositOk(_ sender: UIButton) {
         //입금 확인
-        print("입금")
+        
     }
     
 }
