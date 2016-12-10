@@ -11,14 +11,16 @@ import UIKit
 
 class DepositView : UIViewController{
     
-    var temp : String = ""
+    var db  =  DBMethod()
     
     override func viewDidLoad() {
-        
-        let db  =  DBMethod()
         db.openDb()
-        
-        db.insertDeposit(money: 10000)
+        if db.flag == true{
+            db.insertDeposit(money: db.money)
+        }
+        else{
+            db.withdrawInsert(money: db.money)
+        }
         
         super.viewDidLoad()
         
