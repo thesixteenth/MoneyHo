@@ -34,12 +34,11 @@ class MoneyViewController : UIViewController {
         
     }
     
-    
     @IBAction func withdraw(_ sender: UIButton){
         print("출금")
         
         db.money = Int(currentMoney.text!)!
-        db.flag = true
+        db.flag = false
     }
     
     @IBAction func closeView(_ sender: UIButton){

@@ -256,4 +256,36 @@ class DBMethod
         
     }
     
+    func selectBalance () -> Int{
+        
+        let contactDB = FMDatabase(path: databasePath as String)
+        
+        if (contactDB?.open())! {
+            
+            var currentBalance = String()
+            
+            // 잔액 및 전체 출금 금액 찾아오기  ID는 1 번 값만 사용한다.
+            
+            let querySQL = "SELECT BALANCE FROM MONEYHOS WHERE ID = 1"
+            
+            let results:FMResultSet? = contactDB?.executeQuery(querySQL,
+                                                               withArgumentsIn: nil)
+            
+            if results?.next() == true {
+                currentBalance = (results?.string(forColumn: "BALANCE"))!
+                var balance : Int = 0
+                balance = Int(currentBalance)!
+                NSLog("%d", balance)
+                return balance
+                
+            }
+            else {
+                NSLog("Fail")
+                return 0
+            }
+        }
+        
+        return 0
+    }
+    
 }
